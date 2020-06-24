@@ -15,11 +15,56 @@ How do I fairly distribute this kind of work? How do I ensure that the code base
 
 The solution is simple. I started using a Google spreadsheet where each reviewer on my team gets from 0.1 to 1 point for each completed review based on my estimation of the effort. The total number of points developers earn provides me with hits as to who the next reviewer should be.
 
-|Developer|Total Earned|Completed Code Reviews Weight|	
-|---------|------------|-----------------------------|
-|James	|1.2	|1	|0.1	|0.1
-|Mary	|1	|1		
-|Patricia	|0.2	|0.1	|0.1	
-|Robert	|0.5	|0.5		
-|Jennifer	|0			
-|Michael	|0.5	|0.5			
+<table>
+    <thead>
+        <tr>
+            <th>Developer</th>
+            <th>Total Earned</th>
+            <th colspan=3>Completed Code Review Weight</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>James</td>
+            <td>1.2</td>
+            <td>1</td>
+            <td>0.1</td>
+            <td>0.1</td>
+        </tr>
+        <tr>
+            <td>Mary</td>
+            <td>1</td>
+            <td>1</td>
+            <td></td>
+            <td></td>
+        </tr>   
+        <tr>
+            <td>Robert</td>
+            <td>0.5</td>
+            <td>0.5</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Jenifer</td>
+            <td>0</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>      
+        <tr>
+            <td>Patricia</td>
+            <td>0.2</td>
+            <td>0.1</td>
+            <td>0.1</td>
+           <td></td>
+        </tr>    
+        <tr>
+            <td>Michael</td>
+            <td>0.5</td>
+            <td>0.5</td>
+            <td></td>
+            <td></td>
+        </tr>         
+</tbody>
+</table>
