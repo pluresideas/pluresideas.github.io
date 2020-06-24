@@ -20,7 +20,7 @@ The solution is simple. I started using a Google spreadsheet where each reviewer
         <tr>
             <th>Developer</th>
             <th>Total Earned</th>
-            <th colspan=3>Completed Code Review Weight</th>
+            <th colspan="3">Completed Code Review Weight</th>
         </tr>
     </thead>
     <tbody>
