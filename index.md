@@ -74,3 +74,9 @@ The solution is simple. I started using a Google spreadsheet where each reviewer
 During the last user stories refinement meeting I glanced over the Issue Links section and pointed out that I can’t find a prerequisite user story. The scrum master swiftly created it and linked it to the user story we were refining. I was surprised that couple of developers quickly adopted this process and applied it during the same meeting. Using the Issue Links section was a new concept for the team.
 
 Inspecting the Issue Links sections, examining dependencies is a good way of identifying gaps. Linking user stories by using the Issue Links sections also prevents staring working on user stories when dependencies are not yet satisfied. My suggestion is to link user stories as soon as possible, when they are created.
+
+### How to architect solutions?
+
+Solution architecture may have the biggest impact on the projects’ success, requires significant experience so it is important to do it right. Not all developers acting as architects have the required experience.
+
+I suggest that companies develop a process requiring developers acting as architects or participating in the process to submit the work to be reviewed by the company architect.
