@@ -79,4 +79,18 @@ Inspecting the Issue Links sections, examining dependencies is a good way of ide
 
 Solution architecture may have the biggest impact on the projects’ success, requires significant experience so it is important to do it right. Not all developers acting as architects have the required experience.
 
-I suggest that companies develop a process requiring developers acting as architects or participating in the process to submit the work to be reviewed by the company architect.
+I suggest that companies develop a process requiring developers acting as architects or participating in the process to submit the work to be reviewed by their company architect.
+
+### How to build a system with integration points successfully?
+
+When building a system which integrates with other systems it is important to identify any impacts or gaps early on. Identifying impacts to the integration interfaces which are not in the control of the implementation team is especially important. The required impacts need to be added to a project plan, feasibility evaluated, and the implementation could have impact on the system being built. 
+
+It can be very tempting to start building new services, the system infrastructure, pipelines, executing performance tests, evaluating tools and libraries. Teams with low confidence would likely start here. 
+
+Confident teams know they can build any system. They have tools to mimic the work of the system and to interact with the integration interfaces without writing any code. They would examine the requested features and attempt to fulfill these features by interacting with the integration interfaces mimicking the work of the system.
+
+These exercises would not only confirm feasibility, identify any impacts, but would also help teams with understanding of the system they need to integrate with. Once the interaction with the integration interfaces is know, the architecture work can start.
+
+With this approach there is a better chance of an earlier success, less rework, resulting in costs savings which is a win for everyone. 
+
+
