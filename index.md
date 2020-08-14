@@ -91,7 +91,7 @@ Confident teams know they can build any system. They have tools to mimic the wor
 
 These exercises would not only confirm feasibility, identify any impacts, but would also help teams with understanding of the system they need to integrate with. Once the interaction with the integration interfaces is know, the architecture work can start.
 
-With this approach there is a better chance of an earlier success, less rework, resulting in costs savings which is a win for everyone. 
+With this approach there is a better chance of an earlier success, less rework, resulting in cost savings which is a win for everyone. 
 
 ### How to define units of work?
 
