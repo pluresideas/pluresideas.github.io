@@ -93,4 +93,13 @@ These exercises would not only confirm feasibility, identify any impacts, but wo
 
 With this approach there is a better chance of an earlier success, less rework, resulting in costs savings which is a win for everyone. 
 
+### How to define units of work?
 
+Units of work definitions always specify what needs to be done. Knowing ‘why’ is just as important. It helps developers with understanding of the work and guides the implementation.
+
+Stories missing the ‘why’ are often debated during planning, implementation, and even during the implementation review. Some of the stories are found as not needed because the ‘why’ statement was not captured or understood.
+
+Of course a good definition of units of work needs other parts as well but I would urge the teams to start with using ‘why’. This [artickle](https://medium.com/@SFWebDigital/the-5-key-components-of-an-agile-user-story-6586ea63e1db)
+ captures all the important parts. 
+
+Which methodology teams use, agile, waterfall or something else is unimportant; the success of the implementation stars with a good understanding of the work needed. 
