@@ -1,3 +1,3 @@
 # My blog
 
-https://pluresideas.github.io/
+https://pluresideas.com
