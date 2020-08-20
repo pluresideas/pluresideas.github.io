@@ -102,4 +102,14 @@ Stories missing the ‘why’ are often debated during planning, implementation,
 Of course a good definition of units of work needs other parts as well but I would urge the teams to start with using ‘why’. This [article](https://medium.com/@SFWebDigital/the-5-key-components-of-an-agile-user-story-6586ea63e1db)
  captures all the important parts. 
 
-Which methodology teams use, agile, waterfall or something else is unimportant; the success of the implementation stars with a good understanding of the work needed. 
+Which methodology teams use, agile, waterfall or something else is unimportant; the success of the implementation stars with a good understanding of the work needed.
+
+### Code review - How to retain knowledge gained during code reviews?
+
+I received this code review comment:
+
+"14, 24, and 32 or so have ‘section’ as id names. These are examples as mentioned that do not accurately reflect the implied html. Just something I consider a 'best practice' to avoid."
+
+The reviewer inspected an html, matching style sheet, and was not satisfied with the css selector names. He spent some time thinking what the names should (not) be however this knowledge did not get captured in his code review comment.
+
+My suggestion would be for the reviewers to document their suggestions. Suggestions add clarity to the code review comments.
