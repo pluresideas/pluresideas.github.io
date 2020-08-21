@@ -113,3 +113,9 @@ I received this code review comment:
 The reviewer inspected an html, matching style sheet, and was not satisfied with the css selector names. He spent some time thinking what the names should (not) be however this knowledge did not get captured in his code review comment.
 
 My suggestion would be for the reviewers to document their suggestions. Suggestions add clarity to the code review comments.
+
+### Get a team’s buy-in first
+
+We all love recognition from our clients. Sometimes we rush with presenting our plans, research, architecture, or other work without getting the team’s buy-in. It is too late for the team to ask questions when the work is already being presented to a client.
+
+I would advise presenting the work first to your team only in a safe environment. Be prepared to defend your work. Respond to comments and questions just like you would respond to code review comments.
