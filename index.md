@@ -71,13 +71,13 @@ The solution is simple. I started using a Google spreadsheet where each reviewer
 
 ### How to identify project gaps?
 
-During the last user stories refinement meeting I glanced over the Issue Links section and pointed out that I can’t find a prerequisite user story. The scrum master swiftly created it and linked it to the user story we were refining. I was surprised that couple of developers quickly adopted this process and applied it during the same meeting. Using the Issue Links section was a new concept for the team.
+During the last user stories refinement meeting I glanced over the Issue Links section and pointed out that I can't find a prerequisite user story. The scrum master swiftly created it and linked it to the user story we were refining. I was surprised that couple of developers quickly adopted this process and applied it during the same meeting. Using the Issue Links section was a new concept for the team.
 
 Inspecting the Issue Links sections, examining dependencies is a good way of identifying gaps. Linking user stories by using the Issue Links sections also prevents starting working on user stories when dependencies are not yet satisfied. My suggestion is to link user stories as soon as possible, when they are created.
 
 ### How to architect solutions?
 
-Solution architecture may have the biggest impact on the projects’ success, requires significant experience so it is important to do it right. Not all developers acting as architects have the required experience.
+Solution architecture may have the biggest impact on the projects' success, requires significant experience so it is important to do it right. Not all developers acting as architects have the required experience.
 
 I suggest that companies develop a process requiring developers acting as architects or participating in the process to submit the work to be reviewed by their company architect.
 
@@ -95,11 +95,11 @@ With this approach there is a better chance of an earlier success, less rework, 
 
 ### How to define units of work?
 
-Units of work definitions always specify what needs to be done. Knowing ‘why’ is just as important. It helps developers with understanding of the work and guides the implementation.
+Units of work definitions always specify what needs to be done. Knowing 'why' is just as important. It helps developers with understanding of the work and guides the implementation.
 
-Stories missing the ‘why’ are often debated during planning, implementation, and even during the implementation review. Some of the stories are found as not needed because the ‘why’ statement was not captured or understood.
+Stories missing the 'why' are often debated during planning, implementation, and even during the implementation review. Some of the stories are found as not needed because the 'why' statement was not captured or understood.
 
-Of course a good definition of units of work needs other parts as well but I would urge the teams to start with using ‘why’. This [article](https://medium.com/@SFWebDigital/the-5-key-components-of-an-agile-user-story-6586ea63e1db)
+Of course a good definition of units of work needs other parts as well but I would urge the teams to start with using 'why'. This [article](https://medium.com/@SFWebDigital/the-5-key-components-of-an-agile-user-story-6586ea63e1db)
  captures all the important parts. 
 
 Which methodology teams use, agile, waterfall or something else is unimportant; the success of the implementation stars with a good understanding of the work needed.
@@ -108,15 +108,15 @@ Which methodology teams use, agile, waterfall or something else is unimportant; 
 
 I received this code review comment:
 
-"14, 24, and 32 or so have ‘section’ as id names. These are examples as mentioned that do not accurately reflect the implied html. Just something I consider a 'best practice' to avoid."
+"14, 24, and 32 or so have 'section' as id names. These are examples as mentioned that do not accurately reflect the implied html. Just something I consider a 'best practice' to avoid."
 
 The reviewer inspected an html, matching style sheet, and was not satisfied with the css selector names. He spent some time thinking what the names should (not) be however this knowledge did not get captured in his code review comment.
 
 My suggestion would be for the reviewers to document their suggestions. Suggestions add clarity to the code review comments.
 
-### Get a team’s buy-in first
+### Get a team's buy-in first
 
-We all love recognition from our clients. Sometimes we rush with presenting our plans, research, architecture, or other work without getting the team’s buy-in. It is too late for the team to ask questions when the work is already being presented to a client.
+We all love recognition from our clients. Sometimes we rush with presenting our plans, research, architecture, or other work without getting the team's buy-in. It is too late for the team to ask questions when the work is already being presented to a client.
 
 I would advise presenting the work first to your team only in a safe environment. Be prepared to defend your work. Respond to comments and questions just like you would respond to code review comments.
 
@@ -127,6 +127,6 @@ I recently reviewed a pipeline code where a developer added a `lint` stage to a 
 
 I questioned the developer the order of the pipeline steps. I would expect that first the code would be checkout out, lint, built, and tests executed and only then when all these steps succeeded a docker image should be created.
 
-The developer copied and pasted someone else’s code without understanding how it works, was not able to speak about it, and was going to ask other developers whether my concern was a valid or not. I could see from my conversation with him that he does not understand the fundamentals of my concern. I wanted him to understand my concern so that my concern would become his concern as the <del>author</del> of the code, that he would be able to carry a discussion with other developers. Clearly he was not ready for such discussion as I failed to articulate my concern to him clearly. 
+The developer copied and pasted someone else's code without understanding how it works, was not able to speak about it, and was going to ask other developers whether my concern was a valid or not. I could see from my conversation with him that he does not understand the fundamentals of my concern. I wanted him to understand my concern so that my concern would become his concern as the <del>author</del> of the code, that he would be able to carry a discussion with other developers. Clearly he was not ready for such discussion as I failed to articulate my concern to him clearly. 
 
-I think repeating someone’s question without ability to defend the question and speaking to it is not a curtesy but quite the opposite. 
+I think repeating someone's question without the ability to defend and talk about it, is not as helpful as one might think.
