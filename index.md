@@ -119,3 +119,14 @@ My suggestion would be for the reviewers to document their suggestions. Suggesti
 We all love recognition from our clients. Sometimes we rush with presenting our plans, research, architecture, or other work without getting the team’s buy-in. It is too late for the team to ask questions when the work is already being presented to a client.
 
 I would advise presenting the work first to your team only in a safe environment. Be prepared to defend your work. Respond to comments and questions just like you would respond to code review comments.
+
+
+### How to not to ask questions? 
+
+I recently reviewed a pipeline code where a developer added a `lint` stage to a Jenkins file. I noticed `docker run` was used to run a docker image and then `lint` was executed from a shell of the docker container.
+
+I questioned the developer the order of the pipeline steps. I would expect that first the code would be checkout out, lint, built, and tests executed and only then when all these steps succeeded a docker image should be created.
+
+The developer copied and pasted someone else’s code without understanding how it works, was not able to speak about it, and was going to ask other developers whether my concern was a valid or not. I could see from my conversation with him that he does not understand the fundamentals of my concern. I wanted him to understand my concern so that my concern would become his concern as the <del>author</del> of the code, that he would be able to carry a discussion with other developers. Clearly he was not ready for such discussion as I failed to articulate my concern to him clearly. 
+
+I think repeating someone’s question without ability to defend the question and speaking to it is not a curtesy but quite the opposite. 
