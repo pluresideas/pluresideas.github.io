@@ -130,3 +130,20 @@ I questioned the developer the order of the pipeline steps. I would expect that 
 The developer copied and pasted someone else's code without understanding how it works, was not able to speak about it, and was going to ask other developers whether my concern was a valid or not. I could see from my conversation with him that he does not understand the fundamentals of my concern. I wanted him to understand my concern so that my concern would become his concern as the <del>author</del> of the code, that he would be able to carry a discussion with other developers. Clearly he was not ready for such discussion as I failed to articulate my concern to him clearly. 
 
 I think repeating someone's question without the ability to defend and talk about it, is not as helpful as one might think.
+
+### Discourage asking for help privately
+
+Today, I was asked to help with getting our older React project running after two developers where unable to do so.
+
+The additional components where a NodeJS authentication proxy, OAuth 2.0 authentication server, and finally the API using AWS CLI. 
+
+One of the issues I encountered was `401 unauthenticated`. I opened up the project’s README and in the `Common Pitfalls` section I wrote a while back I found the solution; the application client ID and secret where invalid. An easy fix…
+
+The next issue was `403 forbidden`. I checked my account role and noticed that my account is missing the proper role. 
+
+I asked the other developer whether he is experiencing the same `403 forbidden` issue. He said that he experience the `401 unauthenticated` error.
+
+If the developer would use the team’s Slack channel reporting the error I would be able quickly point him to the right direction. Because he did not, 3 developers where tied up in the same effort trying to get the project running. 
+
+Teams should be discouraged asking for help privately.
+
