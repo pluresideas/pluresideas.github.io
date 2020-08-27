@@ -133,17 +133,17 @@ I think repeating someone's question without the ability to defend and talk abou
 
 ### Discourage asking for help privately
 
-Today, I was asked to help with getting our older React project running after two developers where unable to do so.
+Today, I was asked to help with getting our older React project running after two developers were unable to do so.
 
-The additional components where a NodeJS authentication proxy, OAuth 2.0 authentication server, and finally the API using AWS CLI. 
+The additional components were a NodeJS authentication proxy, OAuth 2.0 authentication server, and finally the API using AWS CLI. 
 
-One of the issues I encountered was `401 unauthenticated`. I opened up the project’s README and in the `Common Pitfalls` section I wrote a while back I found the solution; the application client ID and secret where invalid. An easy fix…
+One of the issues I encountered was the `401 unauthenticated` error. I opened up the project’s README.  In the `Common Pitfalls` section, that I wrote a while back, I found the solution: the application client ID and secret were invalid. This was an easy fix. 
 
-The next issue was `403 forbidden`. I checked my account role and noticed that my account is missing the proper role. 
+The next issue was the `403 forbidden` error. I checked my account role and noticed that my account was missing the proper role. 
 
-I asked the other developer whether he is experiencing the same `403 forbidden` issue. He said that he experience the `401 unauthenticated` error.
+I asked the other developer whether he is experiencing the same `403 forbidden` error. He said that he experience the `401 unauthenticated` error.
 
-If the developer would use the team’s Slack channel reporting the error I would be able quickly point him to the right direction. Because he did not, 3 developers where tied up in the same effort trying to get the project running. 
+If the developer used the team’s Slack channel to report the error, I would have been able to quickly point him in the right direction. Since he did not do this, three developers were tied up in the same effort trying to get the project running. 
 
-Teams should be discouraged asking for help privately.
+Teams should be discouraged from asking for help privately.
 
