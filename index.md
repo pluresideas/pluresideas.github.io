@@ -147,3 +147,84 @@ If the developer used the team’s Slack channel to report the error, I would ha
 
 Teams should be discouraged from asking for help privately.
 
+### Mocking without using a library
+
+We oftentimes reach out to popular mocking libraries when writing unit tests. Alternatively we could use features of the programing language to achieve the same goal.
+
+In this simplified example I use the classic NestJS controller and service pattern:
+
+```
+import { Controller, Get } from '@nestjs/common';
+import { ProductTypeService } from './product-type.service';
+
+@Controller('/product-type')
+export class ProductTypeController {
+  constructor(private readonly productTypesService: ProductTypeService) {}
+
+  @Get('/list')
+  productTypeList(): string[] {
+    return this.productTypesService.productTypeList();
+  }
+}
+```
+
+The service class implements an interface. This interface is used later for mocking of the service.
+```
+import { Injectable } from '@nestjs/common';
+
+export interface ProductTypeServiceInterface {
+  productTypeList(): string[];
+}
+
+@Injectable()
+export class ProductTypeService implements ProductTypeServiceInterface {
+  productTypeList(): string[] {
+    return ['Convenience', 'Shopping', 'Speciality', 'Unsought'];
+  }
+}
+```
+
+When mocking of the service is not required writing a unit test is quite simple with composing the object being tested.
+```
+import { ProductTypeController } from './product-type-controller';
+
+describe('ProductTypeController', () => {
+  describe('ProductTypeService', () => {
+    describe('productTypeList()', () => {
+      it('should return a list of product types', () => {
+        const productTypeListValues = ['Convenience', 'Shopping', 'Speciality', 'Unsought'];
+        const productTypeList = new ProductTypeController(new ProductTypeService()).productTypeList();
+        expect(productTypeList).toEqual(productTypeListValues);
+      });
+    });
+  });
+});
+```
+
+When mocking of the service is required, I construct a mock of the service by using the already mentioned service interface.
+```
+import { ProductTypeController } from './product-type-controller';
+import { ProductTypeService, ProductTypeServiceInterface } from './product-type.service';
+
+describe('ProductTypeController', () => {
+  describe('ProductTypeService', () => {
+    describe('productTypeList()', () => {
+      it('should return a list of product types', () => {
+        const productTypeListValues = ['A', 'B', 'C'];
+        const productTypeService = <ProductTypeServiceInterface>{
+          productTypeList: () => productTypeListValues,
+        };
+        const productTypeList = new ProductTypeController(productTypeService).productTypeList();
+        expect(productTypeList).toEqual(productTypeListValues);
+      });
+    });
+  });
+});
+```
+
+What are the advantages of this approach?
+
+This approach enables building up valuable programming skills in the given programming language and framework.
+Here in this example I mimicked [@Injectable](https://docs.nestjs.com/providers) by composing the [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects) being tested, and created the service mock by implementing an [interface](https://www.typescriptlang.org/docs/handbook/interfaces.html).
+
+In addition, understanding and writing of these tests does not require knowledge of a particular mocking library.
