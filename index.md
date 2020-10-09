@@ -9,7 +9,7 @@ The solution was simple. For my next merge request, I approached the merge reque
 I would encourage reviewers to communicate with authors of merge requests using GitLab comments. The advantage is that there is a record of these communications available to anyone participating. 
 
 ### How to distribute code reivew workload?
-Developers love coding but not so much doing code reviews, naturally. On my project developers who wrote the code are responsible for finding reviewers.
+Developers love coding but not so much doing code reviews, naturally. On my project, developers who wrote the code are responsible for finding reviewers.
 
 How do I fairly distribute this kind of work? How do I ensure that the code base knowledge spreads among the developers evenly?
 
@@ -73,7 +73,7 @@ The solution is simple. I started using a Google spreadsheet where each reviewer
 
 During the last user stories refinement meeting I glanced over the Issue Links section and pointed out that I can't find a prerequisite user story. The scrum master swiftly created it and linked it to the user story we were refining. I was surprised that couple of developers quickly adopted this process and applied it during the same meeting. Using the Issue Links section was a new concept for the team.
 
-Inspecting the Issue Links sections, examining dependencies is a good way of identifying gaps. Linking user stories by using the Issue Links sections also prevents starting working on user stories when dependencies are not yet satisfied. My suggestion is to link user stories as soon as possible, when they are created.
+Inspecting the Issue Links sections, examining dependencies is a good way of identifying gaps. Linking user stories by using the Issue Links sections also prevents starting working on user stories when dependencies are not yet satisfied.
 
 ### How to architect solutions?
 
@@ -85,7 +85,7 @@ I suggest that companies develop a process requiring developers acting as archit
 
 When building a system which integrates with other systems it is important to identify any impacts or gaps early on. Identifying impacts to the integration interfaces which are not in the control of the implementation team is especially important. The required impacts need to be added to a project plan, feasibility evaluated, and the implementation could have impact on the system being built. 
 
-It can be very tempting to start building new services, the system infrastructure, pipelines, executing performance tests, evaluating tools and libraries. Teams with low confidence would likely start here. 
+It can be very tempting to start building new services, the system infrastructure, pipelines, executing performance tests, evaluating tools, and libraries. Teams with low confidence would likely start somewhere here. 
 
 Confident teams know they can build any system. They have tools to mimic the work of the system and to interact with the integration interfaces without writing any code. They would examine the requested features and attempt to fulfill these features by interacting with the integration interfaces mimicking the work of the system.
 
