@@ -228,3 +228,15 @@ This approach enables building up valuable programming skills in the given progr
 Here in this example I mimicked [@Injectable](https://docs.nestjs.com/providers) by composing the [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects) being tested, and created the service mock by implementing an [interface](https://www.typescriptlang.org/docs/handbook/interfaces.html).
 
 In addition, understanding and writing of these tests does not require knowledge of a particular mocking library.
+
+### Code exercises for interviews
+
+Last week I reviewed a coding exercise submitted by a senior full-stack developer. He used Angular for frontend and NestJS for backend.
+
+Given the assignment, I expected the backend service module to be simple. However, it had 262 lines of code. I noticed several issues like not understanding a difference between `map()` and `forEach()`, unnecessary initialization of local variables to `null`, not making private class fields private, unused class fields, module imports, and many other issues. 
+
+The most concerning issues was that the code did not work right. The developer did not realize that this `@Injectable()` service is a singleton. The file read cash’s implemented in this service incorrectly exposed an internal error state to all callers of the backend API. Once the error state was set by a first caller, it was set for all callers of the API.
+
+The assignment did not ask for implementation of the file read cash so the developer went beyond what was actually needed. This made the service class much larger, harder to read, and see other issues. Correct refactoring of this service module or using a cash library would be the right thing to do. However the easiest would be not to implement the cash at all.
+
+I would prefer less but quality code, documenting any potential shortcomings or possible improvements in the project’s `README` file. Such work would be rated much higher.
