@@ -243,7 +243,7 @@ I would prefer less but quality code, documenting any potential shortcomings or 
 
 ### Notification for changes to project’s dependencies
 
-I investigated options for notifications when project’s dependencies change so that we know when to initiate a process for approving these changes. The approval process is outside of the scope of code reviews. 
+I investigated options for notifications when project’s dependencies change so that we know when to initiate a process for approving these changes. The approval process is outside the scope of code reviews. 
 
 I added a new job to the project’s GitLab CI pipeline file, `.gitlab-ci.yml`. This job only executes when `package.json` or `package-lock.json` change as part of a `git push` to GitLab. The notification is implemented as a call to a Slack’s Webhook.
 The Slack's Webhook URL should not be shared or committed to the code base. For production, use GitHub's custom environment variables for storing the URL.
@@ -270,4 +270,4 @@ Detected Dependency Change:
     $CI_MERGE_REQUEST_SOURCE_PROJECT_URL | $CI_PIPELINE_URL | $GITLAB_USER_NAME'}"  $SLACK_WEBHOOK_URL
 ```
 
-The resulting Slack notification contains useful information about the project name, branch and clickable links to the project's GitLab page, job, pipeline, etc.
+The resulting Slack notification contains useful information about the project name, branch, and clickable links to the project's GitLab page, job, pipeline, etc.
