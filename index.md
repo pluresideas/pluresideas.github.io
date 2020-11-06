@@ -240,3 +240,34 @@ The most concerning issues was that the code did not work right. The developer d
 The assignment did not ask for implementation of the file read cash so the developer went beyond what was actually needed. This made the service class much larger, harder to read, and see other issues. Correct refactoring of this service module or using a cash library would be the right thing to do. However the easiest would be not to implement the cash at all.
 
 I would prefer less but quality code, documenting any potential shortcomings or possible improvements in the project’s `README` file. Such work would be rated much higher.
+
+### Notification for changes to project’s dependencies
+
+I investigated options for notifications when project’s dependencies change so that we know when to initiate a process for approving these changes. The approval process is outside of the scope of code reviews. 
+
+I added a new job to the project’s GitLab CI pipeline file, `.gitlab-ci.yml`. This job only executes when `package.json` or `package-lock.json` change as part of a `git push` to GitLab. The notification is implemented as a call to a Slack’s Webhook.
+The Slack's Webhook URL should not be shared or committed to the code base. For production, use GitHub's custom environment variables for storing the URL.
+
+```
+# Detects changes to package.json and package-lock.json
+Detected Dependency Change:
+  stage: Detected Dependency Change
+  only:
+    changes:
+      - package.json
+      - package-lock.json
+  variables:
+    SLACK_WEBHOOK_URL: https://hooks.slack.com/services/slack_token
+    SLACK_WEBHOOK_HEADERS: "Content-type: application/json"
+    DEPENDENCY_CHANGE_MSG: "Detected changes to package.json or package-lock.json"
+  script: |
+    echo $DEPENDENCY_CHANGE_MSG
+    echo "Installing cURL CLI tool:"
+    apk --no-cache add curl
+    echo "Involking Slack Webhook notification:"
+    curl -X POST -H $SLACK_WEBHOOK_HEADERS --data "{'text':'$DEPENDENCY_CHANGE_MSG | $CI_PROJECT_NAME |
+    $CI_COMMIT_BRANCH | $CI_PROJECT_URL | $CI_JOB_URL | $CI_MERGE_REQUEST_PROJECT_URL |
+    $CI_MERGE_REQUEST_SOURCE_PROJECT_URL | $CI_PIPELINE_URL | $GITLAB_USER_NAME'}"  $SLACK_WEBHOOK_URL
+```
+
+The resulting Slack notification contains useful information about the project name, branch and clickable links to the project's GitLab page, job, pipeline, etc.
