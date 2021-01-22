@@ -8,7 +8,7 @@ The solution was simple. For my next merge request, I approached the merge reque
 
 I would encourage reviewers to communicate with authors of merge requests using GitLab comments. The advantage is that there is a record of these communications available to anyone participating. 
 
-### How to distribute code reivew workload?
+### How to distribute code review workload?
 Developers love coding but not so much doing code reviews, naturally. On my project, developers who wrote the code are responsible for finding reviewers.
 
 How do I fairly distribute this kind of work? How do I ensure that the code base knowledge spreads among the developers evenly?
